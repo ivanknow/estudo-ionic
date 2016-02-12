@@ -59,7 +59,22 @@
 					"coach" : "Don Carpenter"
 				} ]
 
-			} ]
+			} ],
+			"locations": [{
+				"id": 1015,
+				"name": "Gary Arthur Community Center ct 7",
+				"locationUrl": "http://goo.gl/maps/E0Mhb",
+				"address": "2400 Rt 97, Cookesville, MD 21723",
+				"latitude": 39.300000,
+				"longitude": -77.020000
+			}, {
+				"id": 1016,
+				"name": "Gary Arthur Community Center ct 8",
+				"locationUrl": "http://goo.gl/maps/E0Mhb",
+				"address": "2400 Rt 97, Cookesville, MD 21723",
+				"latitude": 39.300000,
+				"longitude": -77.020000
+			}]
 		};
 
 		function getLeagues() {

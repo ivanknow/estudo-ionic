@@ -2,14 +2,18 @@
 	'use strict';
 
 	angular.module('eliteApp').controller('LeaguesCtrl',
-			[ 'eliteApi', LeaguesCtrl ]);
+			[ '$state','eliteApi', LeaguesCtrl ]);
 
-	function LeaguesCtrl(eliteApi) {
+	function LeaguesCtrl($state,eliteApi) {
 		var that = this;
 		var leagues = eliteApi.getLeagues();
-		var leagueData = eliteApi.getLeagueData();
+		that.leagues = leagues;
 		
-		console.log(leagues);
+		that.selectLeague = function(id){
+		//TODO
+			$state.go("app.teams");
+			
+		}
 	};
 
 })();
