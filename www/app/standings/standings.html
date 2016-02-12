@@ -1,7 +1,7 @@
 <ion-view title="Standings" ng-controller="StandingsCtrl as vm"> <ion-content
 	class="has-header">
 <div class="list">
-
+<button class="button button-positive" ng-click="vm.chamaPopup()"> Click</button>
 	<div ng-repeat="division in vm.standings">
 		<div class="item item-divider item-energized">{{division.divisionName}}</div>
 		<a class="item item-icon-right"
