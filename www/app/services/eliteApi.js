@@ -28,7 +28,30 @@
 				"id" : 2009,
 				"homeScreen" : "* 5th Grade Championship - 7:30m MAC 3\n* 6th Grade Championship - 6:30pm MAC 4\n* 7th Grade White Championship - 7:30pm MAC 4\n* 7th Grade Green Championship - 7:30pm MAC 2\n* 8th Grade Championship - 7:30pm MAC 1\n* 9th Grade Championship - 8:30pm MAC 4\n* 10th Grade Championship - 8:30pm MAC 1\n* 11th Grade Championship - 8:30pm MAC 3",
 				"rulesScreen" : null
-			}
+			},
+
+			"standings" : [ {
+				"divisionName" : "5th Grade - Green",
+				"divisionStandings" : [ {
+					"teamId" : 3275,
+					"teamName" : "Severn Elite Gold",
+					"wins" : 3,
+					"losses" : 1,
+					"winningPct" : ".750",
+					"pointsFor" : 141,
+					"pointsAgainst" : 126,
+					"pointsDiff" : 15
+				}, {
+					"teamId" : 3220,
+					"teamName" : "HC Elite OMalley 5th",
+					"wins" : 3,
+					"losses" : 1,
+					"winningPct" : ".750",
+					"pointsFor" : 196,
+					"pointsAgainst" : 191,
+					"pointsDiff" : 5
+				} ]
+			} ]
 
 			,
 			"teams" : [ {
@@ -59,46 +82,45 @@
 					"coach" : "Don Carpenter"
 				} ]
 
-			},
-			{
-				"divisionName": "5th Grade - White",
-				"divisionTeams": [{
-					"id": 3225,
-					"name": "CBSA Hoyas 5th Grade",
-					"coach": "Terrance Taylor"
-				}, {
-					"id": 3276,
-					"name": "HC Elite 4th Tookes",
-					"coach": "Anthony Tookes"
-				}, {
-					"id": 3221,
-					"name": "HC Elite Knisley 5th",
-					"coach": "Jordan Knisley"
-				}, {
-					"id": 3226,
-					"name": "Randelstown Runnin Rebels 5th",
-					"coach": "Eric Levi"
-				}, {
-					"id": 3223,
-					"name": "Up n Coming Clippers 5th",
-					"coach": "Brian Jackson"
-				}]
-			}],
-			"locations": [{
-				"id": 1015,
-				"name": "Gary Arthur Community Center ct 7",
-				"locationUrl": "http://goo.gl/maps/E0Mhb",
-				"address": "2400 Rt 97, Cookesville, MD 21723",
-				"latitude": 39.300000,
-				"longitude": -77.020000
 			}, {
-				"id": 1016,
-				"name": "Gary Arthur Community Center ct 8",
-				"locationUrl": "http://goo.gl/maps/E0Mhb",
-				"address": "2400 Rt 97, Cookesville, MD 21723",
-				"latitude": 39.300000,
-				"longitude": -77.020000
-			}]
+				"divisionName" : "5th Grade - White",
+				"divisionTeams" : [ {
+					"id" : 3225,
+					"name" : "CBSA Hoyas 5th Grade",
+					"coach" : "Terrance Taylor"
+				}, {
+					"id" : 3276,
+					"name" : "HC Elite 4th Tookes",
+					"coach" : "Anthony Tookes"
+				}, {
+					"id" : 3221,
+					"name" : "HC Elite Knisley 5th",
+					"coach" : "Jordan Knisley"
+				}, {
+					"id" : 3226,
+					"name" : "Randelstown Runnin Rebels 5th",
+					"coach" : "Eric Levi"
+				}, {
+					"id" : 3223,
+					"name" : "Up n Coming Clippers 5th",
+					"coach" : "Brian Jackson"
+				} ]
+			} ],
+			"locations" : [ {
+				"id" : 1015,
+				"name" : "Gary Arthur Community Center ct 7",
+				"locationUrl" : "http://goo.gl/maps/E0Mhb",
+				"address" : "2400 Rt 97, Cookesville, MD 21723",
+				"latitude" : 39.300000,
+				"longitude" : -77.020000
+			}, {
+				"id" : 1016,
+				"name" : "Gary Arthur Community Center ct 8",
+				"locationUrl" : "http://goo.gl/maps/E0Mhb",
+				"address" : "2400 Rt 97, Cookesville, MD 21723",
+				"latitude" : 39.300000,
+				"longitude" : -77.020000
+			} ]
 		};
 
 		function getLeagues() {

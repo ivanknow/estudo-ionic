@@ -1,6 +1,16 @@
-<ion-view>
-<ion-content class="has-header">
-<h1>Teams</h1>
+<ion-view title="Teams" ng-controller="StandingsCtrl as vm"> <ion-content
+	class="has-header">
+<div class="list">
 
-</ion-content>
+	<div ng-repeat="division in vm.standings">
+		<div class="item item-divider item-energized">{{division.divisionName}}</div>
+		<a class="item item-icon-right"
+			ng-repeat="team in division.divisionStandings"
+			href="#/app/teams/{{team.id}}"> {{team.teamName}} </a>
+	</div>
+
+</div>
+
+</ion-content> </ion-view>
+
 </ion-view>
