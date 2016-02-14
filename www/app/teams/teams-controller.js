@@ -9,7 +9,9 @@
 	
 	function TeamsCtrl($stateParams,eliteApi){
 		var vm = this;
-		var data = eliteApi.getLeagueData();
-		vm.teams = data.teams;
+		eliteApi.getLeagueData(function(data){
+			vm.teams = data.teams;
+			
+		});
 	}
 })();
