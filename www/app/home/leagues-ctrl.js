@@ -7,7 +7,7 @@
 	function LeaguesCtrl($state,eliteApi) {
 		var that = this;
 		
-		eliteApi.getLeagues(function(data){
+		eliteApi.getLeagues().then(function(data){
 			that.leagues = data;	
 		});
 		
