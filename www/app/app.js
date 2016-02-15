@@ -2,7 +2,7 @@
  * 
  */
 
-angular.module("eliteApp", [ "ionic" ]).run(function($ionicPlatform) {
+angular.module("eliteApp", [ "ionic","angular-cache" ]).run(function($ionicPlatform,CacheFactory) {
 	$ionicPlatform.ready(function() {
 
 		if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -14,6 +14,12 @@ angular.module("eliteApp", [ "ionic" ]).run(function($ionicPlatform) {
 			// org.apache.cordova.statusbar required
 			StatusBar.styleDefault();
 		}
+		
+		  //10seconds = 10000
+	    CacheFactory.createCache("leagueDataCache", {storageMode: "localStorage", maxAge: 5000, deleteOnExpire: "aggressive"});
+	    CacheFactory.createCache("leaguesCache", {storageMode: "localStorage", maxAge: 5000, deleteOnExpire: "aggressive"});
+	    CacheFactory.createCache("myTeamsCache", {storageMode: "localStorage"});
+	    CacheFactory.createCache("staticCache", {storageMode: "localStorage"});
 	});
 }).config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider

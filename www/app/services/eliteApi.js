@@ -1,20 +1,32 @@
 (function() {
 	'use strict';
-	angular.module("eliteApp").factory('eliteApi', [ '$http','$q','$ionicLoading', eliteApi ]);
+	angular.module("eliteApp").factory('eliteApi', [ '$http','$q','$ionicLoading','CacheFactory', eliteApi ]);
 
-	function eliteApi($http,$q,$ionicLoading) {
+	function eliteApi($http,$q,$ionicLoading,CacheFactory) {
 		var currentLeagueId = 0;
 		
+		self.leaguesCache = CacheFactory.get('leaguesCache');
+		self.leagueDataCache = CacheFactory.get('leagueDataCache');
 
 		function getLeagues() {
 			var deferred = $q.defer();
-			$http.get("http://elite-schedule.net/api/leaguedata/").success(
-					function(data) {
-						deferred.resolve(data);
-					}).error(function() {
-				        console.log("Error while making HTTP call.");
-				        deferred.reject(data);
-				      });
+			var cacheKey = "leagues";
+			var leaguesData = self.leaguesCache.get(cacheKey);
+			if(leaguesData){
+				console.log("tem coisa na cache");
+				deferred.resolve(leaguesData);
+			}else{
+				$http.get("http://elite-schedule.net/api/leaguedata/").success(
+						function(data) {
+							console.log("do HTTP call.");
+							self.leaguesCache.put(cacheKey,data);
+							deferred.resolve(data);
+						}).error(function() {
+					        console.log("Error while making HTTP call.");
+					        deferred.reject(data);
+					      });
+			}
+			
 			return deferred.promise;
 
 		}
